@@ -18,7 +18,7 @@ namespace MobSalesSrv.Models
         public MobSalesSrvContext() : base("name=MobSalesSrvContext")
         {
         }
-
+         
         public System.Data.Entity.DbSet<MobSalesSrv.Models.Route> Routes { get; set; }
     
     }
