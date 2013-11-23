@@ -10,7 +10,7 @@ namespace MobSalesSrv.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(MobSalesSrv.Models.MobSalesSrvContext context)
