@@ -159,7 +159,12 @@
     <Compile Include="Migrations\201311231149054_Init.Designer.cs">
       <DependentUpon>201311231149054_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201311262245209_LastModified.cs" />
+    <Compile Include="Migrations\201311262245209_LastModified.Designer.cs">
+      <DependentUpon>201311262245209_LastModified.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\IHasLastModified.cs" />
     <Compile Include="Models\MobSalesSrvContext.cs" />
     <Compile Include="Models\Route.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -184,6 +189,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Properties\PublishProfiles\mobsalessrv - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\mobsalessrv - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\mobsalessrv.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -211,6 +218,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201311231149054_Init.resx">
       <DependentUpon>201311231149054_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311262245209_LastModified.resx">
+      <DependentUpon>201311262245209_LastModified.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

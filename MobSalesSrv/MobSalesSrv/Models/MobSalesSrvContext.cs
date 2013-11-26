@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 
@@ -20,6 +22,21 @@ namespace MobSalesSrv.Models
         }
          
         public System.Data.Entity.DbSet<MobSalesSrv.Models.Route> Routes { get; set; }
+        public override int SaveChanges()
+        {
+            DateTime now = DateTime.UtcNow;
+            foreach (ObjectStateEntry entry in (this as IObjectContextAdapter).ObjectContext.ObjectStateManager.GetObjectStateEntries(EntityState.Added | EntityState.Modified))
+            {
+                if (!entry.IsRelationship)
+                {
+                    IHasLastModified lastModified = entry.Entity as IHasLastModified;
+                    if (lastModified != null)
+                        lastModified.LastModified = now;
+                }
+            }
+
+            return base.SaveChanges();
+        }
     
     }
 }

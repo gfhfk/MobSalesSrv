@@ -23,6 +23,7 @@ namespace MobSalesSrv
             );
             ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Route>("Routes");
+            builder.Namespace = "MobSalesSrv.Models";
             config.Routes.MapODataRoute("odata", "odata", builder.GetEdmModel());
         }
     }
