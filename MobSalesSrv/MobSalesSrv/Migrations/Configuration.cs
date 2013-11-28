@@ -24,8 +24,28 @@ namespace MobSalesSrv.Migrations
                 new Route { RouteName = "thursday" },
                 new Route { RouteName = "Friday" },
                 new Route { RouteName = "Saurday" }
-    );
+            );
             context.SaveChanges();
+
+            foreach (Route rout in context.Routes)
+            {
+                var customers = new Customer[10];
+                for (int i = 0; i < customers.Length; i++)
+                {
+                    customers[i] = new Customer
+                    {
+                        CustomerName = "Customer" + rout.RouteID + "_" + i,
+                        Address = "NY -The best city!",
+                        Comment = "It doesnt matter what do you think about Mobile WEb Application!",
+                        RouteID = rout.RouteID
+                    };
+
+                }
+                context.Customers.AddOrUpdate(
+                   c => c.CustomerName,
+                customers
+                );
+            }
 
         }
     }

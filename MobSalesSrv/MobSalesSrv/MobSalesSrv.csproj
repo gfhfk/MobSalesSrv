@@ -144,6 +144,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BreezeSimpleCorsHandler.cs" />
     <Compile Include="App_Start\BreezeWebApiConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RoutesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -176,7 +178,12 @@
     <Compile Include="Migrations\201311262245209_LastModified.Designer.cs">
       <DependentUpon>201311262245209_LastModified.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201311282225208_AddCustomer.cs" />
+    <Compile Include="Migrations\201311282225208_AddCustomer.Designer.cs">
+      <DependentUpon>201311282225208_AddCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IHasLastModified.cs" />
     <Compile Include="Models\MobSalesSrvContext.cs" />
     <Compile Include="Models\Route.cs" />
@@ -239,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201311262245209_LastModified.resx">
       <DependentUpon>201311262245209_LastModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311282225208_AddCustomer.resx">
+      <DependentUpon>201311282225208_AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

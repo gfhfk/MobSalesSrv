@@ -1,4 +1,5 @@
-﻿using MobSalesSrv.Models;
+﻿using Microsoft.Data.Edm;
+using MobSalesSrv.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,16 +16,24 @@ namespace MobSalesSrv
             
             // Web API routes
             config.MapHttpAttributeRoutes();
-
+            config.Routes.MapODataRoute("odata", "odata", GetEdmModel());
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+            config.EnableQuerySupport();
+           //config.EnableSystemDiagnosticsTracing();
+           
+        }
+        public static IEdmModel GetEdmModel()
+        {
+            ODataModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Route>("Routes");
+            builder.EntitySet<Customer>("Customers");
+
             builder.Namespace = "MobSalesSrv.Models";
-            config.Routes.MapODataRoute("odata", "odata", builder.GetEdmModel());
+            return builder.GetEdmModel();
         }
     }
 }

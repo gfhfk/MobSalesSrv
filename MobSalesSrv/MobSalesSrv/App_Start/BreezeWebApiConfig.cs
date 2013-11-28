@@ -1,3 +1,4 @@
+using Breeze.WebApi;
 using System.Web.Http;
 
 [assembly: WebActivator.PreApplicationStartMethod(
@@ -13,6 +14,9 @@ namespace MobSalesSrv.App_Start {
   public static class BreezeWebApiConfig {
 
     public static void RegisterBreezePreStart() {
+
+        // CORS enabled on this server
+        GlobalConfiguration.Configuration.MessageHandlers.Add(new BreezeSimpleCorsHandler());
       GlobalConfiguration.Configuration.Routes.MapHttpRoute(
           name: "BreezeApi",
           routeTemplate: "breeze/{controller}/{action}"
