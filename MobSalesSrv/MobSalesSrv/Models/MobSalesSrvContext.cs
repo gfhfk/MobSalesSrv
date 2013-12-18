@@ -23,6 +23,12 @@ namespace MobSalesSrv.Models
          
         public System.Data.Entity.DbSet<MobSalesSrv.Models.Route> Routes { get; set; }
         public System.Data.Entity.DbSet<MobSalesSrv.Models.Customer> Customers { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetails> OrderDetails { get; set; }
+
+
         public override int SaveChanges()
         {
             DateTime now = DateTime.UtcNow;

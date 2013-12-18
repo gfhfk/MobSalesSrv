@@ -31,6 +31,10 @@ namespace MobSalesSrv
             ODataModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<Route>("Routes");
             builder.EntitySet<Customer>("Customers");
+            builder.EntitySet<ProductType>("ProductTypes");
+            builder.EntitySet<Product>("Products");
+            builder.EntitySet<Order>("Orders");
+            builder.EntitySet<OrderDetails>("OrderDetails");
 
             builder.Namespace = "MobSalesSrv.Models";
             return builder.GetEdmModel();
