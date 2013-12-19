@@ -16,7 +16,7 @@ namespace MobSalesSrv.Migrations
         protected override void Seed(MobSalesSrv.Models.MobSalesSrvContext context)
         {
             
-            // routes
+     /*       // routes
             context.Routes.AddOrUpdate(
                 r => r.RouteName,
                 new Route { RouteName = "No route" },
@@ -120,7 +120,7 @@ namespace MobSalesSrv.Migrations
                 }
             }
             context.SaveChanges();
-
+*/
         }
     }
 }

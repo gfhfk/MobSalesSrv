@@ -174,23 +174,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201311231149054_Init.cs" />
-    <Compile Include="Migrations\201311231149054_Init.Designer.cs">
+    <Compile Include="fonts\Migrations\201311231149054_Init.cs" />
+    <Compile Include="fonts\Migrations\201311231149054_Init.Designer.cs">
       <DependentUpon>201311231149054_Init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201311262245209_LastModified.cs" />
-    <Compile Include="Migrations\201311262245209_LastModified.Designer.cs">
+    <Compile Include="fonts\Migrations\201311262245209_LastModified.cs" />
+    <Compile Include="fonts\Migrations\201311262245209_LastModified.Designer.cs">
       <DependentUpon>201311262245209_LastModified.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201311282225208_AddCustomer.cs" />
-    <Compile Include="Migrations\201311282225208_AddCustomer.Designer.cs">
+    <Compile Include="fonts\Migrations\201311282225208_AddCustomer.cs" />
+    <Compile Include="fonts\Migrations\201311282225208_AddCustomer.Designer.cs">
       <DependentUpon>201311282225208_AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201312181333266_AddProductAndOrder.cs" />
-    <Compile Include="Migrations\201312181333266_AddProductAndOrder.Designer.cs">
+    <Compile Include="fonts\Migrations\201312181333266_AddProductAndOrder.cs" />
+    <Compile Include="fonts\Migrations\201312181333266_AddProductAndOrder.Designer.cs">
       <DependentUpon>201312181333266_AddProductAndOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="fonts\Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IHasLastModified.cs" />
     <Compile Include="Models\MobSalesSrvContext.cs" />
@@ -253,16 +253,16 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201311231149054_Init.resx">
+    <EmbeddedResource Include="fonts\Migrations\201311231149054_Init.resx">
       <DependentUpon>201311231149054_Init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311262245209_LastModified.resx">
+    <EmbeddedResource Include="fonts\Migrations\201311262245209_LastModified.resx">
       <DependentUpon>201311262245209_LastModified.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311282225208_AddCustomer.resx">
+    <EmbeddedResource Include="fonts\Migrations\201311282225208_AddCustomer.resx">
       <DependentUpon>201311282225208_AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201312181333266_AddProductAndOrder.resx">
+    <EmbeddedResource Include="fonts\Migrations\201312181333266_AddProductAndOrder.resx">
       <DependentUpon>201312181333266_AddProductAndOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
